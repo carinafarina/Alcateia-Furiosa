@@ -30,14 +30,14 @@ class TelegramBot:
   def Criar_resposta(self):
     return 'Olá, bem vindo ao Alcateia Furiosa!'
 # responder
-  def Responder(self,chat_id,resposta):
+  def Responder(self, resposta, chat_id):
     #enviar
     link_de_envio = f'{self.url_base}sendMessage?chat_id={chat_id}&text={resposta}'
     requests.get(link_de_envio)
 
 
 bot = TelegramBot()
-bot.Iniciar
+bot.Iniciar()
   
 
    
