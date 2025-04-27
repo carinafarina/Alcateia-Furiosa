@@ -13,8 +13,12 @@ class TelegramBot:
     update_id = None
     while True:
       atualizacao = self.obter_mensagens(update_id)
-      mensagens = atualizacao['result']
-     
+      if atualizacao is None:
+        print("Erro ao obter atualizações. Tentando novamente em 5 segundos...")
+        time.sleep(5)
+        continue
+        
+      mensagens = atualizacao.get('result', [])
       if mensagens:
         for mensagem in mensagens          update_id = mensagem['update_id']
           chat_id = mensagem['message']['from']['id']
