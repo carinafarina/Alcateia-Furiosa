@@ -1,4 +1,6 @@
+
 import requests
+import time
 import json
 
 class TelegramBot:
@@ -12,25 +14,25 @@ class TelegramBot:
     while True:
       atualizacao = self.obter_mensagens(update_id)
       mensagens = atualizacao['result']
+     
       if mensagens:
-        for mensagem in mensagens:
-          update_id = mensagem['update_id']
+        for mensagem in mensagens          update_id = mensagem['update_id']
           chat_id = mensagem['message']['from']['id']
-          resposta = self.Criar_resposta()
-          self.Responder(resposta,chat_id)
+          resposta = self.criar_resposta()
+          self.responder(resposta,chat_id)
   
 # Obter mensagens
   def obter_mensagens(self, update_id):    
     link_requisicao = f'{self.url_base}getUpdates?timeout=100'
-    if update_id:  
+    if update_id:
         link_requisicao = f'{link_requisicao}&offset={update_id + 1}'
         resultado = requests.get(link_requisicao)
         return json.loads(resultado.content)
 # Cria resposta
-  def Criar_resposta(self):
+  def criar_resposta(self):
     return 'Olá, bem vindo ao Alcateia Furiosa!'
 # responder
-  def Responder(self, resposta, chat_id):
+  def responder(self, resposta, chat_id):
     #enviar
     link_de_envio = f'{self.url_base}sendMessage?chat_id={chat_id}&text={resposta}'
     requests.get(link_de_envio)
