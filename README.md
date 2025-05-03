@@ -1,6 +1,6 @@
 # AlcateiaCSBot
 
-Este é um bot simples do Telegram que fornece informações sobre o time de Counter-Strike "Alcateia CS". Os usuários podem interagir com o bot para obter o placar, as últimas notícias e informações sobre o próximo jogo através de comandos de barra.
+Este é um bot simples do Telegram que fornece informações sobre o time da "Alcateia CS". Os usuários podem interagir com o bot para obter o placar, as últimas notícias e informações sobre o próximo jogo através de comandos de barra.
 
 ## Funcionalidades
 
