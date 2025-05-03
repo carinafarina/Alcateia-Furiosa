@@ -42,7 +42,7 @@ class AlcateiaCSBot:
     if mensagem.lower() in ('s','sim'):
       return 'aguarde um momento...'
     else: 
-      return 'Gostaria de acessar as outras opções? Digite "opções"' 
+      return 'Gostaria de acessar as outras opções? Digite "opções"'
   
   
   # responder
