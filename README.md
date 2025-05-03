@@ -1,28 +1,29 @@
 # AlcateiaCSBot
 
-Este é um bot simples do Telegram que fornece informações sobre o time de "Alcateia CS". Os usuários podem interagir com o bot para obter o placar, as últimas notícias e informações sobre o próximo jogo.
+Este é um bot simples do Telegram que fornece informações sobre o time de Counter-Strike "Alcateia CS". Os usuários podem interagir com o bot para obter o placar, as últimas notícias e informações sobre o próximo jogo através de comandos de barra.
 
 ## Funcionalidades
 
-O bot oferece as seguintes funcionalidades:
+O bot oferece as seguintes funcionalidades através de comandos:
 
-* **Opções Iniciais:** Ao iniciar a conversa ou digitar "opções", o bot apresenta um menu com as seguintes opções:
-    * `1` - Placar
-    * `2` - Notícias
-    * `3` - Próximo Jogo
-* **Placar:** Ao digitar `1`, o bot informa o placar atual da Alcateia CS.
-* **Notícias:** Ao digitar `2`, o bot exibe as últimas notícias sobre o time.
-* **Próximo Jogo:** Ao digitar `3`, o bot informa contra qual time será o próximo jogo.
+* **/Placar:** Exibe o placar atual da Alcateia CS.
+* **/noticias:** Exibe as últimas notícias sobre o time.
+* **/proximojogo:** Informa contra qual time será o próximo jogo.
+* **Opções Iniciais:** Ao iniciar a conversa ou digitar "opções", o bot apresenta um menu com os comandos disponíveis.
 * **Continuação:** Após fornecer uma informação, o bot pergunta se o usuário gostaria de saber mais alguma coisa (`s/n`). Ao digitar `s` ou `sim` (case-insensitive), o bot responde com uma mensagem de espera.
-* **Opções Novamente:** Se o usuário digitar qualquer outra coisa que não seja uma das opções ou a confirmação de continuar, o bot sugere digitar "opções" para ver o menu novamente.
+* **Opções Novamente:** Se o usuário digitar qualquer outra coisa que não seja um comando ou a confirmação de continuar, o bot sugere digitar "opções" para ver o menu novamente.
 
 ## Como Usar
 
 1.  Certifique-se de ter uma conta no Telegram.
 2.  Procure pelo bot `@AlcateiaCSBot` (ou o nome que você definir para o seu bot) no Telegram e inicie uma conversa.
-3.  Envie qualquer mensagem para iniciar a interação. O bot responderá com as opções disponíveis.
-4.  Digite o número correspondente à informação que você deseja obter (1, 2 ou 3).
-5.  Siga as instruções do bot para continuar interagindo ou voltar ao menu principal.
+3.  Você pode interagir com o bot das seguintes maneiras:
+    * Digite qualquer mensagem para iniciar a interação e ver as opções.
+    * Digite `/placar` para obter o placar.
+    * Digite `/noticias` para ver as últimas notícias.
+    * Digite `/proximojogo` para saber sobre o próximo jogo.
+    * Digite `opções` para ver o menu de comandos novamente.
+4.  Após receber uma informação, responda com `s` ou `sim` se quiser saber mais alguma coisa.
 
 ## Pré-requisitos
 
@@ -71,15 +72,13 @@ Para executar o bot localmente:
 Este é um bot básico com funcionalidades limitadas. Aqui estão algumas ideias para melhorias futuras:
 
 * **Persistência de Dados:** Atualmente, as informações (placar, notícias, próximo jogo) estão codificadas no bot. Considere usar um banco de dados ou um arquivo externo para armazenar e atualizar esses dados dinamicamente.
-* **Interface Mais Rica:** Explore as funcionalidades da API do Telegram para enviar mensagens com formatação, botões inline ou de teclado personalizado para uma interação mais intuitiva.
+* **Interface Mais Rica:** Explore as funcionalidades da API do Telegram para enviar mensagens com formatação (Markdown ou HTML), botões inline ou de teclado personalizado para uma interação mais intuitiva. Os comandos de barra são um ótimo primeiro passo!
 * **Tratamento de Erros:** Implemente tratamento de erros para lidar com falhas na comunicação com a API do Telegram ou outras situações inesperadas.
-* **Comandos Específicos:** Em vez de depender apenas de números, utilize comandos específicos (por exemplo, `/placar`, `/noticias`, `/proximojogo`) para acionar as funcionalidades do bot.
+* **Melhor Tratamento de Entrada:** Considere usar bibliotecas para processamento de linguagem natural ou expressões regulares para entender melhor as entradas dos usuários.
 * **Integração com Outras Fontes de Dados:** Busque automaticamente placares e notícias de fontes online para manter o bot sempre atualizado.
 
 ## Contribuição
 
 Se você tiver ideias para melhorar este bot, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-## Licença
 
-[Aqui você pode adicionar informações sobre a licença do seu projeto, por exemplo, MIT License.]
