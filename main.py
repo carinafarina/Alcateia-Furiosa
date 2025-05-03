@@ -3,11 +3,13 @@ import json
 import os
 
 
-class AlcateiaCSBot: 
+class AlcateiaCSBot:
+
   def __init__(self):
     token = '7710789467:AAGTDpqoetCT8X_hKat-QH-nH8o6-FRQDdA'
     self.url_base = f'https://api.telegram.org/bot{token}/'
-   # iniciar bot
+
+  # iniciar bot
   def Iniciar(self):
     update_id = None
     while True:
@@ -38,18 +40,18 @@ class AlcateiaCSBot:
       return f'''Novo técnico será o do Furioso.{os.linesep}Gostaria de saber mais alguma coisa?(s/n)'''
     if mensagem == '/proximojogo':
       return f'''O proximo jogo é contra o time Furias{os.linesep}Gostaria de saber mais alguma coisa?(s/n)'''
-    
-    if mensagem.lower() in ('s','sim'):
+
+    if mensagem.lower() in ('s', 'sim'):
       return 'aguarde um momento...'
-    else: 
+    else:
       return 'Gostaria de acessar as outras opções? Digite "opções"'
-  
-  
+
   # responder
   def responder(self, resposta, chat_id):
     #enviar mensagem
     link_de_envio = f'{self.url_base}sendMessage?chat_id={chat_id}&text={resposta}'
     requests.get(link_de_envio)
+
 
 bot = AlcateiaCSBot()
 bot.Iniciar()
