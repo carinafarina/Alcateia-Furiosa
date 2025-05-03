@@ -82,4 +82,4 @@ Este é um bot básico com funcionalidades limitadas. Aqui estão algumas ideias
 Se você tiver ideias para melhorar este bot, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 
->>>>>>> 6a611d26ea2444f2723fb33a75f76a562d9bdce8
+
